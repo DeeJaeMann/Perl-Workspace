@@ -46,14 +46,7 @@ if($strNumber =~ m/^\d{4,}$/) {
     $strNumber =~ s/(?<=\d)(?=(?:\d{3})+(?!\d))/,/g;
     printf "$strNumber"
 } 
-# RegEx:
-# This modified RegEx will check if we match digits only
-# Because we failed to match at least 4 in the previous check,
-#  that means we have 3 or less digits
-elsif($strNumber =~ m/^\d+$/) {
+else 
+{
     printf "Please enter at least 4 digits!"
-} 
-# Catch all other cases of input
-else {
-    printf "Please enter only digits!"
 }
