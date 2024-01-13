@@ -6,16 +6,16 @@
 ###
 
 use strict;
-my $strNumber = 0;
+my $str_number = 0;
 
 # Prompt user for input of a number larger than 999
 printf "Please enter a number greater than 999 to add commas to.\n";
 printf "The larger the number, the better: ";
 
 # Get input from user
-$strNumber = <STDIN>;
+$str_number = <STDIN>;
 # Remove the ending newline
-chomp $strNumber;
+chomp $str_number;
 
 # Verify that the input is only digits
 # The first check is for the entire line signified by
@@ -24,7 +24,7 @@ chomp $strNumber;
 #  ^ - Beginning of the line
 #  $ - End of the line
 #  \d{4,} - Match at least 4 digit characters
-if($strNumber =~ m/^\d{4,}$/) {
+if($str_number =~ m/^\d{4,}$/) {
     #printf "Input is at least 4 digits"
     #
     # This search/replace pattern utilizes postitive and negative lookarounds
@@ -43,8 +43,8 @@ if($strNumber =~ m/^\d{4,}$/) {
     # ?!  - Negative Lookhead (Check to see if the pattern ahead does not match)
     # /,/ - Place a ',' at the position matched
     # /g  - global modifier
-    $strNumber =~ s/(?<=\d)(?=(?:\d{3})+(?!\d))/,/g;
-    printf "$strNumber"
+    $str_number =~ s/(?<=\d)(?=(?:\d{3})+(?!\d))/,/g;
+    printf "$str_number"
 } 
 else 
 {
