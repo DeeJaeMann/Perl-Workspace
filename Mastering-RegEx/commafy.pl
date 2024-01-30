@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 ###
 # Example of how to use RegEx to add commas for US Numbers greater than 999

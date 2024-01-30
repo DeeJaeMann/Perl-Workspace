@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # Example from Mastering Regular Expressions
 # Converts plain text to HTML
